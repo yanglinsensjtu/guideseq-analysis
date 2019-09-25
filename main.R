@@ -15,12 +15,12 @@ HRA01.gr <- change2gr(HRA01)
 HRA02.gr <- change2gr(HRA02)
 HRA03.gr <- change2gr(HRA03)
 HRA04.gr <- change2gr(HRA04)
+total <- unique(union(union(HRA03.gr, HRA04.gr),union(HRA01.gr, HRA02.gr)))
 
-source('plot.function.R')
-for (i in seq_len(length(HRA01.gr))) {
-  plotGviz(coding.obj = HRA01.gr,
-           i = i,
-           title = '',
-           bounds = 10000,
-           path = '../HRA01/')
-}
+source('annotation.R')
+source('plotscript.R')
+
+
+
+
+
